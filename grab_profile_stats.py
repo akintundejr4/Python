@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup
 provided_json_file = sys.argv[1]
 
 class InstagramScraper:
+    """Helper class for scrapping Instagram profiles, part of a social media campaign effort project."""
 
     def getinfo(self, url):
         html = urllib.request.urlopen(url, context=self.ctx).read()
@@ -65,7 +66,5 @@ class InstagramScraper:
         
         print("A json file containing profile statistic information has been created")    
 
-
-# The class has to be declared before you call the main scrapper method. 
 instagram = InstagramScraper()
 instagram.main()

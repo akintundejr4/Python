@@ -19,7 +19,6 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from operator import itemgetter
 
-
 # This will tell you where your script is actually being run from.
 # print(os.getcwd())
 
@@ -28,6 +27,7 @@ lower_follower_count = int(sys.argv[2])
 upper_follower_count = int(sys.argv[3])
 
 class InstagramScraper:
+    """Helper class for scrapping Instagram profiles, part of a social media campaign effort project.""" 
 
     def getinfo(self, url):
         html = urllib.request.urlopen(url, context=self.ctx).read()
@@ -112,7 +112,6 @@ class InstagramScraper:
         print("A text file containing information as requested has been created")
 
 
-        
-# The class has to be declared before you call the main scrapper method.
+# Main calls.
 instagram = InstagramScraper()
 instagram.main()
