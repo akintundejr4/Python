@@ -16,6 +16,7 @@ class Tools:
                 self.parse_dict(val, result)
             else:
                 result.append(val)
+        return result
 
     def quicksort(self, listToSort): 
         leftList = []
