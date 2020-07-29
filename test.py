@@ -18,6 +18,10 @@ class Tools:
                 result.append(val)
         return result
 
+    def yield_stuff(self): 
+        for i in range(10): 
+            yield i * i 
+
     def quicksort(self, listToSort): 
         leftList = []
         rightList = []
@@ -49,6 +53,9 @@ my_dict1 = {'root': {'b1': {'leaf1': [1,2,3],
            }
 
 result = []
-tools.parse_dict(my_dict1, result)
+# tools.parse_dict(my_dict1, result)
+
+myGen = tools.yield_stuff() 
+
 
 # print(quicksort(theArray))
